@@ -1,7 +1,7 @@
 context:
   name: py-rattler-build
   python_name: py_rattler_build
-  version: "0.35.9"
+  version: "0.44.0"
   python_min: "3.9.*"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ python_name[0] }}/${{ python_name }}/${{ python_name }}-${{ version }}.tar.gz
-  sha256: d64daa564ea10027ce945b594d0d91965e21dc895c69e3f0e2f64f3f9d57674b
+  sha256: 8a536441b8068e9fca3a995811b0a7b457da28dc741c396f1e58d353d8c0904b
 
 build:
   number: 0
@@ -42,7 +42,7 @@ requirements:
 tests:
   - python:
       imports:
-      - rattler_build
+        - rattler_build
       pip_check: true
 
 about:
