@@ -29,4 +29,7 @@ python_min:
 rust_compiler:
 - rust
 target_platform:
-- linux-ppc64le
+- linux-64
+zip_keys:
+- - python
+  - channel_sources
