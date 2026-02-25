@@ -1,7 +1,7 @@
 context:
   name: py-rattler-build
   python_name: py_rattler_build
-  version: "0.58.0"
+  version: "0.58.1"
   # fix is coming in rattler-build. Currently need to force usage so that it is recognized in `match`
   python_min: ${{ python_min }}
 
@@ -11,11 +11,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ python_name[0] }}/${{ python_name }}/${{ python_name }}-${{ version }}.tar.gz
-  sha256: ed451a556839b067253b793544d970ee4fc6a8db187edb1f19a4d8a08452c974
+  sha256: cdd2f67ae46de34a01f3e718170ffd238d08aa29028e004786db5b5f55bcc74b
 
 build:
   number: 0
-  skip: not (match(python, python_min ~ ".*") and is_abi3)
+  skip: not (match(python, python_min ~ ".*") and is_abi3) or (target_platform == "linux-ppc64le")
   python:
     version_independent: true
 
@@ -55,7 +55,9 @@ about:
     inspired by `conda-build` and `boa`, and the output of a regular `rattler-build`
     run is a package that can be installed using `mamba`, `rattler` or `conda`.
   license: BSD-3-Clause
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - THIRDPARTY.yml
   documentation: https://rattler.build/latest/reference/python_bindings/
   repository: https://github.com/prefix-dev/rattler-build
 

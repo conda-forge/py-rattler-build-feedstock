@@ -11,4 +11,6 @@ maturin build -v --jobs 1 --release --strip --manylinux off --interpreter=%PYTHO
 FOR /F "delims=" %%i IN ('dir /s /b target\wheels\*.whl') DO set py_rattler_build_wheel=%%i
 %PYTHON% -m pip install --ignore-installed --no-deps %py_rattler_build_wheel% -vv || exit 1
 
+cd py-rattler-build/rust
 cargo-bundle-licenses --format yaml --output THIRDPARTY.yml || exit 1
+copy THIRDPARTY.yml %SRC_DIR%\THIRDPARTY.yml || exit 1
