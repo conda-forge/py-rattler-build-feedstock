@@ -2,7 +2,6 @@
 set "PYO3_PYTHON=%PYTHON%"
 
 set CARGO_PROFILE_RELEASE_STRIP=symbols
-set CARGO_PROFILE_RELEASE_LTO=fat
 
 set "CMAKE_GENERATOR=NMake Makefiles"
 maturin build -v --jobs 1 --release --strip --manylinux off --interpreter=%PYTHON% --no-default-features --features=native-tls || exit 1

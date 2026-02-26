@@ -3,8 +3,6 @@
 set -euxo pipefail
 
 export CARGO_PROFILE_RELEASE_STRIP=symbols
-export CARGO_PROFILE_RELEASE_LTO=fat
-
 export OPENSSL_DIR=$PREFIX
 
 # Use native-tls on conda-forge
