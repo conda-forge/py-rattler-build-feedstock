@@ -1,6 +1,11 @@
 @echo on
 set "PYO3_PYTHON=%PYTHON%"
 
+set "PYTHONUTF8=1"
+set "PYTHONIOENCODING=utf-8"
+
+set CARGO_HOME=C:\cargo
+
 set CARGO_PROFILE_RELEASE_STRIP=symbols
 
 set "CMAKE_GENERATOR=NMake Makefiles"
