@@ -29,6 +29,9 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ stdlib('c') }}
     - ${{ compiler('rust') }}
+    - cmake
+    - if: unix
+      then: make
     - cargo-bundle-licenses
   host:
     - python
