@@ -202,6 +202,3 @@ Feedstock Maintainers
 * [@Hofer-Julian](https://github.com/Hofer-Julian/)
 * [@wolfv](https://github.com/wolfv/)
 
-
-<!-- dummy commit to enable rerendering -->
-
