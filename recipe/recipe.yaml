@@ -1,7 +1,7 @@
 context:
   name: py-rattler-build
   python_name: py_rattler_build
-  version: "0.60.0"
+  version: "0.61.1"
   # fix is coming in rattler-build. Currently need to force usage so that it is recognized in `match`
   python_min: ${{ python_min }}
 
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ python_name[0] }}/${{ python_name }}/${{ python_name }}-${{ version }}.tar.gz
-  sha256: 6fb0e0b936323fc15a73c9ab0672fde8f0ab8f2ddc7e8c63e115f025c9532512
+  sha256: 37fcc6fc3156c8f9b4bc291af839b00a5c8d2945dda053c76db2d1051b1ec960
 
 build:
   number: 0
@@ -29,6 +29,9 @@ requirements:
     - ${{ compiler('c') }}
     - ${{ stdlib('c') }}
     - ${{ compiler('rust') }}
+    - cmake
+    - if: unix
+      then: make
     - cargo-bundle-licenses
   host:
     - python

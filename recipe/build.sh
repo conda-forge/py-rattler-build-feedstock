@@ -4,6 +4,9 @@ set -euxo pipefail
 
 export CARGO_PROFILE_RELEASE_STRIP=symbols
 export OPENSSL_DIR=$PREFIX
+# Use cmake to build aws-lc-sys, because conda's CFLAGS inject -O2 which
+# overrides the -O0 required by jitterentropy-base.c, causing a build failure.
+export AWS_LC_SYS_CMAKE_BUILDER=1
 
 # Use native-tls on conda-forge
 export MATURIN_PEP517_ARGS="--no-default-features --features=native-tls"
