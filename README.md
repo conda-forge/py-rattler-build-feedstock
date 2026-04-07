@@ -3,7 +3,7 @@ About py-rattler-build-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py-rattler-build-feedstock/blob/main/LICENSE.txt)
 
-Home: http://rattler.build/
+Home: https://rattler.build/
 
 Package license: BSD-3-Clause
 
@@ -11,7 +11,7 @@ Summary: The fastest way to build conda packages programatically
 
 Development: https://github.com/prefix-dev/rattler-build
 
-Documentation: https://rattler.build/latest/reference/python_bindings/
+Documentation: https://rattler.build/latest/py-rattler-build/reference/
 
 The `rattler-build` tooling and library creates cross-platform relocatable
 binaries / packages from a simple recipe format. The recipe format is heavily
