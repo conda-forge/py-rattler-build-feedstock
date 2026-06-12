@@ -1,7 +1,7 @@
 context:
   name: py-rattler-build
   python_name: py_rattler_build
-  version: "0.65.1"
+  version: "0.66.0"
   # fix is coming in rattler-build. Currently need to force usage so that it is recognized in `match`
   python_min: ${{ python_min }}
 
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ python_name[0] }}/${{ python_name }}/${{ python_name }}-${{ version }}.tar.gz
-  sha256: 896468793a45747b7ac1f860196432d9d57ded413ac4aceb9e76a06431ce186f
+  sha256: ef76a974cc8c95bb145fb626c0075da56d23f1e7da0e867314562793fb471505
 
 build:
   number: 0
