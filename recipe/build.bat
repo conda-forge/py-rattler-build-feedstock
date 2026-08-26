@@ -10,8 +10,14 @@ md %CARGO_HOME%
 set CARGO_TARGET_DIR=C:\.ct
 
 set CARGO_PROFILE_RELEASE_STRIP=symbols
-REM Use cmake to build aws-lc-sys
-set "AWS_LC_SYS_CMAKE_BUILDER=1"
+
+if "%target_platform%"=="win-arm64" (
+    @rem Use CMake for aws-lc-sys and clang-cl for its ARM64 assembly.
+    set "AWS_LC_SYS_CMAKE_BUILDER=1"
+    set "CC_aarch64_pc_windows_msvc=clang-cl.exe"
+    set "CXX_aarch64_pc_windows_msvc=clang-cl.exe"
+    set "ASM_aarch64_pc_windows_msvc=clang-cl.exe"
+)
 
 set "CMAKE_GENERATOR=Ninja"
 set "MATURIN_PEP517_ARGS=--no-default-features --features=native-tls"
