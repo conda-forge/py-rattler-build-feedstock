@@ -32,6 +32,7 @@ requirements:
     - cmake
     - if: unix
       then: make
+      else: ninja
     - cargo-bundle-licenses
   host:
     - python

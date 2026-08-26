@@ -13,7 +13,7 @@ set CARGO_PROFILE_RELEASE_STRIP=symbols
 REM Use cmake to build aws-lc-sys
 set "AWS_LC_SYS_CMAKE_BUILDER=1"
 
-set "CMAKE_GENERATOR=NMake Makefiles"
+set "CMAKE_GENERATOR=Ninja"
 set "MATURIN_PEP517_ARGS=--no-default-features --features=native-tls"
 
 %PYTHON% -m pip install . -vv || exit 1
