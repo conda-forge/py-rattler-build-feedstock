@@ -25,18 +25,19 @@ requirements:
       then:
         - python
         - cross-python_${{ target_platform }}
-        - maturin ~=1.2.1
+        - maturin
     - ${{ compiler('c') }}
     - ${{ stdlib('c') }}
     - ${{ compiler('rust') }}
     - cmake
     - if: unix
       then: make
+      else: ninja
     - cargo-bundle-licenses
   host:
     - python
     - python-abi3
-    - maturin ~=1.2.1
+    - maturin
     - pip
     - if: unix
       then: openssl
