@@ -14,7 +14,7 @@ source:
   sha256: 591190665e0af3fd6df739f0f68b0a176a9399f65042bd9a7ce6a73cb82b0fe7
 
 build:
-  number: 1
+  number: 0
   skip: not (match(python, python_min ~ ".*") and is_abi3) or (target_platform == "linux-ppc64le")
   python:
     version_independent: true
