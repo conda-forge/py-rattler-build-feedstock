@@ -230,5 +230,6 @@ Feedstock Maintainers
 =====================
 
 * [@Hofer-Julian](https://github.com/Hofer-Julian/)
+* [@pb01ka](https://github.com/pb01ka/)
 * [@wolfv](https://github.com/wolfv/)
 
