@@ -22,7 +22,7 @@ if "%target_platform%"=="win-arm64" (
 set "CMAKE_GENERATOR=Ninja"
 set "MATURIN_PEP517_ARGS=--no-default-features --features=native-tls"
 
-%PYTHON% -m pip install . -vv || exit 1
+%PYTHON% -m pip install ./py-rattler-build -vv || exit 1
 
 cd py-rattler-build/rust
 cargo-bundle-licenses --format yaml --output THIRDPARTY.yml || exit 1
