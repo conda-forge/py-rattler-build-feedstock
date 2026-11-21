@@ -1,7 +1,6 @@
 context:
   name: py-rattler-build
-  python_name: py_rattler_build
-  version: "0.73.0"
+  version: "0.81.0"
   # fix is coming in rattler-build. Currently need to force usage so that it is recognized in `match`
   python_min: ${{ python_min }}
 
@@ -10,8 +9,9 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ python_name[0] }}/${{ python_name }}/${{ python_name }}-${{ version }}.tar.gz
-  sha256: 591190665e0af3fd6df739f0f68b0a176a9399f65042bd9a7ce6a73cb82b0fe7
+  # Use the GitHub tarball: the PyPI sdist upload is currently broken upstream
+  url: https://github.com/prefix-dev/rattler-build/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: e4796afaeabb93094dfb990c9718ddf420f96a8c468845afcbb3dd48bba1dbc8
 
 build:
   number: 0
