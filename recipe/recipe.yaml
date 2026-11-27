@@ -77,6 +77,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - Hofer-Julian
-    - wolfv
+    - conda-forge/rattler-build
     - pb01ka
